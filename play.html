@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unity WebGL Demo — Играть</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Играть</h1>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="index.html" class="nav-link">Главная</a></li>
+        <li><a href="learn.html" class="nav-link">Обучение</a></li>
+        <li><a href="about.html" class="nav-link">О проекте</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <section class="play-fullscreen">
+      <div class="card-grid">
+        <div class="card" style="grid-column: 1 / -1;">
+          <div class="badge">Demo</div>
+          <h2>Окно игры</h2>
+          <p>Это место под полноэкранное окно Unity WebGL. Здесь позже будет отображаться ваша игра.</p>
+        </div>
+      </div>
+
+      <!-- Заглушка полноэкранного окна -->
+      <div class="fullscreen-sample" aria-label="Окно игры-заглушка">
+        <div class="fullscreen-frame" id="fake-game">
+          <div class="stub-area" style="height:100%; display:flex; align-items:center; justify-content:center;">
+            <div class="stub-box" style="width:min(90%,700px); text-align:center;">
+              <p>Здесь будет Unity WebGL блок после подключения билда.</p>
+              <p class="muted">Пока используется заглушка. Чтобы вставить билд, помести в Build/ и замени содержимое.</p>
+              <button onclick="alert('Пока заглушка. В реальном проекте здесь будет кнопка запуска игры.')">
+                Посмотреть макет кнопки запуска
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="instructions" aria-label="Инструкция по вставке билда">
+      <h3>Инструкция по добавлению Unity-билда позже</h3>
+      <ol>
+        <li>Создай папку <code>Build/</code> и помести туда файлы Unity WebGL (index.html, .data, .wasm, .loader.js и т. д.).</li>
+        <li>Замени заглушку на реальное окно Unity (например, iframe с src="Build/index.html").</li>
+        <li>Запусти локальный сервер и открой страницу.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 — Демонстрационный раздел: Играть</small>
+  </footer>
+
+  <noscript>Для запуска необходим JavaScript в браузере.</noscript>
+
+  <script>
+    // Простая кнопка пока только для демонстрации.
+  </script>
+</body>
+</html>
